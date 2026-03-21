@@ -103,9 +103,49 @@ a:hover { color: var(--saffron); }
 .support-card p { font-size: 0.88rem; color: var(--clay); margin-bottom: 14px; }
 .support-card a.link { font-size: 0.85rem; font-weight: 700; color: var(--deep-teal); }
 
+/* ARTIST HERO */
+.artist-hero { padding: 80px var(--gap) 60px; overflow: hidden; }
+.artist-hero-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.artist-intro .hero-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--saffron); margin-bottom: 16px; display: block; animation: fadeUp 0.6s ease forwards 0.1s; opacity: 0; }
+.artist-intro h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; color: var(--ink); line-height: 1.0; margin-bottom: 24px; letter-spacing: -0.03em; opacity: 0; animation: fadeUp 0.6s ease forwards 0.2s; }
+.artist-intro h1 span { color: var(--saffron); }
+.artist-tagline { font-size: 1.05rem; color: var(--clay); line-height: 1.75; max-width: 480px; margin-bottom: 20px; opacity: 0; animation: fadeUp 0.6s ease forwards 0.35s; }
+.artist-location { font-size: 0.82rem; color: var(--clay); opacity: 0; animation: fadeUp 0.6s ease forwards 0.4s; margin-bottom: 28px; letter-spacing: 0.02em; }
+.artist-intro .hero-cta { opacity: 0; animation: fadeUp 0.6s ease forwards 0.5s; }
+
+.artist-motifs { position: relative; height: 360px; display: flex; align-items: center; justify-content: center; }
+.motif { position: absolute; font-size: 2.8rem; opacity: 0; animation: floatIn 0.8s ease forwards; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1)); }
+.motif-1 { top: 10%; left: 20%; animation-delay: 0.3s; }
+.motif-2 { top: 5%; left: 60%; animation-delay: 0.45s; font-size: 4rem; }
+.motif-3 { top: 38%; left: 5%; animation-delay: 0.55s; }
+.motif-4 { top: 55%; left: 50%; animation-delay: 0.65s; font-size: 3.5rem; }
+.motif-5 { top: 75%; left: 25%; animation-delay: 0.75s; }
+.motif-6 { top: 30%; left: 75%; animation-delay: 0.85s; font-size: 2.2rem; }
+@keyframes floatIn { from { opacity: 0; transform: scale(0.6) rotate(-15deg); } to { opacity: 1; transform: scale(1) rotate(0deg); } }
+
+/* ARTIST ABOUT */
+.artist-about { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.about-text h2 { margin-bottom: 20px; }
+.about-text .lead { margin-bottom: 16px; }
+.about-values { display: flex; flex-direction: column; gap: 28px; padding-top: 16px; }
+.value-item { display: flex; gap: 20px; align-items: flex-start; }
+.value-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--mist); line-height: 1; flex-shrink: 0; width: 36px; }
+.value-item strong { display: block; font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.value-item p { font-size: 0.88rem; color: var(--clay); line-height: 1.65; margin: 0; }
+
+/* WORK CARD */
+.work-card { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; background: var(--warm-white); border: 1px solid var(--mist); border-radius: 20px; padding: 48px 40px; margin-top: 32px; }
+.work-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--saffron); margin-bottom: 12px; }
+.work-card h3 { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--ink); margin-bottom: 16px; line-height: 1.1; }
+.work-card p { font-size: 0.92rem; color: var(--clay); line-height: 1.7; margin-bottom: 28px; }
+.rangoli-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.rg-cell { background: var(--c); border-radius: 14px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 2rem; transition: transform 0.3s ease; border: 1px solid rgba(0,0,0,0.04); }
+.rg-cell:hover { transform: scale(1.1) rotate(8deg); }
+
 /* FOOTER */
 .footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 48px var(--gap) 32px; }
 .footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footer-inner--two-col { grid-template-columns: 2fr 1fr; }
 .footer-brand { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
 .footer-brand span { color: var(--saffron); }
 .footer p { font-size: 0.82rem; line-height: 1.7; }
@@ -122,8 +162,17 @@ a:hover { color: var(--saffron); }
   .nav-links { display: none; }
   .nav-toggle { display: block; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--cream); padding: 16px var(--gap); border-bottom: 1px solid var(--mist); gap: 16px; }
+  .artist-hero { padding: 48px var(--gap) 32px; }
+  .artist-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .artist-motifs { height: 200px; }
+  .motif { font-size: 1.8rem; }
+  .motif-2 { font-size: 2.4rem; }
+  .motif-4 { font-size: 2rem; }
+  .artist-about { grid-template-columns: 1fr; gap: 40px; }
+  .work-card { grid-template-columns: 1fr; padding: 32px 24px; }
   .game-banner { grid-template-columns: 1fr; padding: 32px 24px; }
   .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+  .footer-inner--two-col { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .hero { padding: 48px var(--gap) 40px; }
 }
