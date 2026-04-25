@@ -348,6 +348,68 @@ img {
   object-fit: cover;
   width: 100%;
 }
+.work-videos {
+  margin-bottom: 56px;
+}
+.work-videos-title {
+  color: #6e6e73;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.work-video-grid {
+  grid-gap: 16px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 680px) {
+  .work-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.video-card {
+  display: flex;
+  flex-direction: column;
+}
+.video-card-inner {
+  aspect-ratio: 4/3;
+  background: #111;
+  border-radius: 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.video-card-player {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  width: 100%;
+}
+.video-card-inner:hover .video-card-player {
+  transform: scale(1.03);
+}
+.video-card-overlay {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+  transition: opacity 0.25s ease;
+}
+.video-card-overlay--hidden {
+  opacity: 0;
+}
+.video-play-icon {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  height: 48px;
+  width: 48px;
+}
 .work-closing {
   border-bottom: 1px solid #d2d2d7;
   border-bottom: 1px solid var(--border);
