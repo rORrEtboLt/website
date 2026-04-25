@@ -460,6 +460,223 @@ img {
   color: var(--text);
   text-decoration: none;
 }
+.admin-page {
+  background: #fff;
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 48px;
+  padding: 48px var(--page-px);
+}
+.admin-inner {
+  margin: 0 auto;
+  max-width: 640px;
+}
+.admin-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.admin-token-section {
+  background: #f5f5f7;
+  background: var(--surface);
+  border-radius: 12px;
+  border-radius: var(--radius);
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.admin-token-hint {
+  color: #6e6e73;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.admin-token-hint a {
+  color: #1d1d1f;
+  color: var(--text);
+  text-decoration: underline;
+}
+.admin-token-row {
+  display: flex;
+  gap: 8px;
+}
+.admin-token-input {
+  background: #fff;
+  background: var(--bg);
+  border: 1px solid #d2d2d7;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: #1d1d1f;
+  color: var(--text);
+  flex: 1 1;
+  font-size: 14px;
+  padding: 10px 14px;
+}
+.admin-token-save {
+  background: #1d1d1f;
+  background: var(--text);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  color: var(--bg);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+.admin-token-save:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+.admin-token-saved {
+  align-items: center;
+  color: #1d1d1f;
+  color: var(--text);
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.admin-token-clear {
+  background: none;
+  border: 1px solid #d2d2d7;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: #6e6e73;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px 12px;
+}
+.admin-project-section {
+  margin-bottom: 40px;
+}
+.admin-project-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.admin-slots {
+  grid-gap: 12px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 480px) {
+  .admin-slots {
+    grid-template-columns: 1fr;
+  }
+}
+.upload-slot {
+  -webkit-tap-highlight-color: transparent;
+  align-items: center;
+  border: 1.5px dashed #d2d2d7;
+  border: 1.5px dashed var(--border);
+  border-radius: 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.upload-slot:active {
+  background: #f5f5f7;
+  background: var(--surface);
+}
+.upload-slot--done {
+  background: #f0fff4;
+  border-color: #34c759;
+  border-style: solid;
+}
+.upload-slot--error {
+  background: #fff5f5;
+  border-color: #ff3b30;
+}
+.upload-slot--uploading {
+  cursor: default;
+  opacity: 0.7;
+}
+.upload-slot-preview {
+  object-fit: cover;
+}
+.upload-slot-icon,
+.upload-slot-preview {
+  border-radius: 8px;
+  flex-shrink: 0;
+  height: 48px;
+  width: 48px;
+}
+.upload-slot-icon {
+  align-items: center;
+  background: #f5f5f7;
+  background: var(--surface);
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+}
+.upload-slot--done .upload-slot-icon {
+  background: #34c759;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.upload-slot--error .upload-slot-icon {
+  background: #ff3b30;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.upload-slot-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+.upload-slot-label {
+  color: #1d1d1f;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+}
+.upload-slot-filename,
+.upload-slot-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.upload-slot-filename {
+  color: #6e6e73;
+  color: var(--text-secondary);
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+}
+.upload-spinner {
+  animation: spin 0.7s linear infinite;
+  border: 2px solid #d2d2d7;
+  border-top-color: #1d1d1f;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  border-top-color: var(--text);
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.admin-locked-note {
+  color: #6e6e73;
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 16px;
+  text-align: center;
+}
 .about-layout {
   grid-gap: 80px;
   align-items: start;
