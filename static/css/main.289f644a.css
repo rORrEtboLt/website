@@ -278,13 +278,27 @@ img {
   font-size: 14px;
   line-height: 1.4;
 }
+.work-hero-figure {
+  margin: 48px 0 56px;
+}
 .work-hero {
   aspect-ratio: 16/7;
   border-radius: 12px;
   border-radius: var(--radius);
-  margin: 48px 0 56px;
   object-fit: cover;
   width: 100%;
+}
+.work-img-caption {
+  color: #6e6e73;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 8px;
+  text-align: center;
+}
+.work-gallery-figure {
+  display: flex;
+  flex-direction: column;
 }
 .work-header {
   margin-bottom: 48px;
