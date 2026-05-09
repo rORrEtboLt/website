@@ -147,49 +147,6 @@ img {
   max-width: 1200px;
   max-width: var(--max-width);
 }
-.footer-newsletter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.footer-newsletter input {
-  background: #fff;
-  background: var(--bg);
-  border: 1px solid #d2d2d7;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  border-radius: var(--radius);
-  color: #1d1d1f;
-  color: var(--text);
-  flex: 1 1;
-  font: inherit;
-  font-size: 14px;
-  min-width: 220px;
-  outline: none;
-  padding: 10px 14px;
-  transition: border-color 0.15s ease;
-}
-.footer-newsletter input:focus {
-  border-color: #6e6e73;
-  border-color: var(--text-secondary);
-}
-.footer-newsletter button {
-  background: #1d1d1f;
-  background: var(--text);
-  border: none;
-  border-radius: 12px;
-  border-radius: var(--radius);
-  color: #fff;
-  color: var(--bg);
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 10px 20px;
-  transition: opacity 0.15s ease;
-}
-.footer-newsletter button:hover {
-  opacity: 0.8;
-}
 .footer-links {
   display: flex;
   flex-wrap: wrap;
